@@ -1,11 +1,7 @@
 import 'dart:io';
-
-// El Aprendiz 2 definirá los atributos de esta clase
-class Contacto{
-  String nombre;
-  String telefono;
-  Contacto(this.nombre, this.telefono);
-}
+import 'contact.dart';       // Aquí ya viene la clase Contacto y tus funciones
+import 'manage_contacts.dart'; // Tus funciones de buscar/eliminar
+import 'list_contacts.dart';
 
 void main() {
   List<Contacto> agenda = [];
@@ -24,16 +20,16 @@ void main() {
 
     switch (opcion) {
       case '1':
-        // TODO: Aprendiz 1 - Implementar lógica para agregar
+        // negro hpta
         break;
       case '2':
-        // TODO: Aprendiz 2 - Implementar lógica para listar
+        listarContactos(agenda);
         break;
       case '3':
-        // TODO: Aprendiz 3 - Implementar lógica para buscar
+        buscarContacto(agenda);
         break;
       case '4':
-        // TODO: Aprendiz 3 - Implementar lógica para eliminar
+        eliminarContacto(agenda);
         break;
       case '5':
         print('Saliendo de la agenda...');
