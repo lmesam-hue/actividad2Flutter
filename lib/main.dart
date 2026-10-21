@@ -2,6 +2,7 @@ import 'dart:io';
 import 'contact.dart';       // Aquí ya viene la clase Contacto y tus funciones
 import 'manage_contacts.dart'; // Tus funciones de buscar/eliminar
 import 'list_contacts.dart';
+import 'add_contact.dart';
 
 void main() {
   List<Contacto> agenda = [];
@@ -20,9 +21,9 @@ void main() {
 
     switch (opcion) {
       case '1':
-        // negro hpta
+        agregarContacto(agenda);
         break;
-      case '2':
+          case '2':
         listarContactos(agenda);
         break;
       case '3':
